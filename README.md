@@ -1,5 +1,3 @@
-sudocoin core
-
 # SUDO Coin (SUDO)
 > *"Computing Power, Back to the People"*
 
