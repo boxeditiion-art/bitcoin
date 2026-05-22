@@ -1,79 +1,67 @@
-Bitcoin Core integration/staging tree
-=====================================
+sudocoin core
 
-https://bitcoincore.org
+# SUDO Coin (SUDO)
+> *"Computing Power, Back to the People"*
 
-For an immediately usable, binary version of the Bitcoin Core software, see
-https://bitcoincore.org/en/download/.
+## What is SUDO?
 
-What is Bitcoin Core?
----------------------
+SUDO is a fair-launch, ASIC-resistant Layer-1 blockchain — forked from Bitcoin Core and powered by the RandomX proof-of-work algorithm.
 
-Bitcoin Core connects to the Bitcoin peer-to-peer network to download and fully
-validate blocks and transactions. It also includes a wallet and graphical user
-interface, which can be optionally built.
+No premine. No ICO. No VC. No bullshit.
 
-Further information about Bitcoin Core is available in the [doc folder](/doc).
+Every coin in existence was mined by the community, starting from block 0.
 
-License
--------
+## Why SUDO?
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/license/MIT.
+Bitcoin's SHA-256 is dominated by industrial ASIC machines worth thousands of dollars. Regular people can't compete.
 
-Development Process
--------------------
+SUDO fixes this. RandomX forces mining to run on CPUs and RAM — hardware everyone already owns. Your old laptop, your home PC, your daily machine — that's your mining rig.
 
-The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly from release branches to indicate new official, stable release versions of Bitcoin Core.
+## Specifications
 
-The https://github.com/bitcoin-core/gui repository is used exclusively for the
-development of the GUI. Its master branch is identical in all monotree
-repositories. Release branches and tags do not exist, so please do not fork
-that repository unless it is for development reasons.
+| Parameter | Value |
+|---|---|
+| Algorithm | RandomX (CPU-optimized) |
+| Total Supply | 50,000,000 SUDO |
+| Block Time | 2.5 minutes |
+| Block Reward | 50 SUDO |
+| Halving Interval | Every 500,000 blocks |
+| Difficulty Adjustment | DigiShield (per block) |
+| Launch Type | Fair Launch — zero premine |
+| Consensus | Proof of Work |
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
-and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
+## Tokenomics
 
-Testing
--------
+- Total supply hard-capped at **50 million SUDO**
+- Block reward starts at **50 SUDO**
+- Halving every **500,000 blocks** (~2.4 years)
+- No founder reward. No dev tax. No ICO allocation.
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
+## Philosophy
 
-### Automated Testing
+SUDO = Super User DO
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled during the generation of the build system) with: `ctest`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+In Linux, `sudo` gives power to the user — bypassing gatekeepers.
 
-There are also [regression and integration tests](/test), written
-in Python.
-These tests can be run (if the [test dependencies](/test) are installed) with: `build/test/functional/test_runner.py`
-(assuming `build` is your build directory).
+That's exactly what this coin does. We're giving computing power back to regular people, not mining farms, not VCs, not institutions.
 
-The CI (Continuous Integration) systems make sure that every pull request is tested on Windows, Linux, and macOS.
-The CI must pass on all commits before merge to avoid unrelated CI failures on new pull requests.
+1024. The fundamental unit of computing. Power of two. Back to basics.
 
-### Manual Quality Assurance (QA) Testing
+## Status
 
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
+> This project is currently in active development.
+> We are looking for based C++ developers to help integrate RandomX into Bitcoin Core.
+> Fair launch. No pay — but you'll be part of something built right.
 
-Translations
-------------
+## Contributing
 
-Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://explore.transifex.com/bitcoin/bitcoin/).
+We need:
+- C++ developers familiar with Bitcoin Core internals
+- Community builders
+- Early miners ready for genesis block
 
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
+Contact: @forgotwords:matrix.org (Matrix/Element)
 
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
+## License
+
+MIT
